@@ -8,8 +8,9 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-color: #dcdcdc;
 }
 
 nav.menu-lateral {
@@ -114,7 +115,6 @@ ul li.item-menu a .icon>i {
     color: #000;
     font-size: 16px;
     pointer-events: none;
-    /* evita clique no ícone */
 }
 
 .input-com-icone input {
@@ -135,7 +135,6 @@ ul li.item-menu a .icon>i {
     gap: 10px;
     padding: 15px;
     margin-left: 79px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 .total, .users, .active, .receita {
@@ -196,6 +195,48 @@ ul li.item-menu a .icon>i {
     bottom: 14px;
     width: 58px;
     color: #fff;
+}
+
+.info-users{
+    display: flex;
+    gap: 14%;
+    width: 61%;
+    height: 172%;
+    padding: 15px;
+    margin-left: 94px;
+    background-color: #fff;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+}
+
+.info-users h2{
+    display: flex;
+    font-size: 20px;
+    height: 5%;
+}
+
+.info-users ul li{
+    display: block;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col h2 {
+  margin-bottom: 12px;
+}
+
+.col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.col ul li{
+    font-size: 17px;
+    margin-left: 10px;
 }
 
 @media (max-width: 853px){
@@ -259,6 +300,10 @@ ul li.item-menu a .icon>i {
         max-width: 150px;
         margin-left: 50px;
     }
+
+    .total p, .receita p{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 430px){
@@ -277,6 +322,10 @@ ul li.item-menu a .icon>i {
     .total, .users, .active, .receita {
         max-width: 150px;
         margin-left: 0;
+    }
+
+    .receita p{
+        left: 25px;
     }
 }
 
@@ -319,6 +368,14 @@ ul li.item-menu a .icon>i {
     position: relative;
     right: 5px;
     }
+
+    .receita p{
+        left: 18px;
+    }
+
+    .total p{
+        left: 25px;
+    }
 }
 
 @media (max-width: 360px){
@@ -338,6 +395,10 @@ ul li.item-menu a .icon>i {
     position: relative;
     top: 5px;
     right: 5px;
+    }
+
+    .total p, .receita p{
+        font-size: 14px;
     }
 }
 
