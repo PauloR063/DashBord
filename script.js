@@ -6,12 +6,19 @@ function formatValue(value) {
     return formatador
 }
 
-const valorReceber = document.querySelector('#inputValueRecebido').value
+const valorSalario = document.querySelector('#inputSalarioRecebido')
 
-function pegaValor(){
-    valorReceber.value
+function changeSalario(){
+    const cardSalario = document.querySelector('.receita-valor')
 
-    console.log(valorReceber)
+    cardSalario.innerHTML = `${formatValue(parseFloat(valorSalario.value))}`
+}   
+
+function enviarInfo(event){
+    if (event.key === 'Enter'){
+        changeSalario()
+        valorSalario.value = '';
+    }
 }
 
-pegaValor()
+valorSalario.addEventListener('keydown', enviarInfo)

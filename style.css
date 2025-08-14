@@ -333,6 +333,33 @@ ul li.item-menu a .icon>i {
     }
 }
 
+@media (max-width: 1280px){
+    .info-users{
+        width: 65%;
+        gap: 199px;
+    }
+
+    .info-users h2{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 1024px){
+    .info-users{
+        width: 81%;
+    }
+
+    .info-users h2{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 912px){
+    .info-users{
+        width: 88%;
+    }
+}
+
 @media (max-width: 853px){
     .info-users{
         margin-left: 173px;
