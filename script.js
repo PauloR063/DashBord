@@ -35,23 +35,7 @@ function showName(){
     let LiName = ''
     let LiPresence = ''
     let LiValor = ''
-    options.forEach((product) => {
-        LiName += `
-        <li>
-           <p>${product.Nickname}</p>
-        </li>
-        `
-        LiPresence += `
-        <li>
-            <p>${product.Presença ? 'Ativo' : 'Expirado'}</p>
-        </li>
-        `
-        LiValor += `
-        <li>
-            <p>${formatValue(product.ValordeCompra)}</p>
-        </li>
-        `
-    });
+    
     
     listName.innerHTML = LiName
     listPrecense.innerHTML = LiPresence
