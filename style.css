@@ -165,14 +165,36 @@ ul li.item-menu a .icon>i {
 .total h1, .users h1, .active h1, .receita h1 {
     position: relative;
     width: 105px;
-    left: 25px;
+    left: 35%;
     font-size: 15px;
     font-weight: 400;
     color: #fff;
     z-index: 0;
 }
 
-.total > i, .users > i, .active > i, .active > i {
+#selectMes{
+    position: relative;
+    width: 42%;
+    left: 35%;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+
+}
+
+.users h1{
+    left: 40%;
+}
+
+.active h1{
+    left: 31%;
+}
+
+.total > i, .users > i, .active > i {
     position: relative;
     right: 0;
     bottom: 7px;
@@ -180,11 +202,18 @@ ul li.item-menu a .icon>i {
     color: #fff;
 }
 
+ .active > i{
+    position: relative;
+    bottom: 6px;
+    font-size: 20px;
+ }
+
+
 .total p, .receita p {
     width: 58px;
     position: relative;
-    left: 36px;
-    bottom: 14px;
+    left: 51px;
+    bottom: 19px;
     color: #fff;
 }
 
@@ -192,51 +221,89 @@ ul li.item-menu a .icon>i {
     display: flex;
     position: relative;
     left: 60px;
-    bottom: 14px;
+    bottom: 19px;
     width: 58px;
     color: #fff;
 }
 
+.active p{
+    bottom: 19px;
+} 
+
+.optionMes{
+    background-color: #dcdcdc;
+}
+
 .info-users{
     display: flex;
-    gap: 14%;
-    width: 61%;
-    height: 172%;
+    justify-content: center;
+    gap: 10%;
+    width: 43%;
+    height: 100%;
     padding: 15px;
     margin-left: 94px;
     background-color: #fff;
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
-.info-users h2{
-    display: flex;
-    font-size: 20px;
-    height: 5%;
-}
-
-.info-users ul li{
-    display: block;
-}
-
-.col{
+.valorRecebido{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.col h2 {
-  margin-bottom: 12px;
+.valorRecebido h1{
+    font-size: 25px;
 }
 
-.col ul {
-  list-style: none;
-  padding: 0;
+
+#inputValueRecebido{
+    border-radius: 5px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    text-align: center;
 }
 
-.col ul li{
-    font-size: 17px;
-    margin-left: 10px;
+#inputValueRecebido::placeholder{
+    color: #000;
+}
+
+.data-users{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-users h1{
+    font-size: 25px;
+}
+
+#input-data-users{
+    border-radius: 5px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    text-align: center;
+}
+
+.descricao-users{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descricao-users h1{
+    font-size: 25px;
+}
+
+#input-descricao{
+    border-radius: 5px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    text-align: center;
 }
 
 @media (max-width: 1280px){
