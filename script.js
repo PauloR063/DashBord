@@ -1,3 +1,6 @@
+const valorSalario = document.querySelector('#inputSalarioRecebido')
+const valorConta = document.querySelector('#inputValueRecebido')
+
 function formatValue(value) {
     const formatador = value.toLocaleString('pt-BR', {
         style: 'currency',
@@ -6,19 +9,33 @@ function formatValue(value) {
     return formatador
 }
 
-const valorSalario = document.querySelector('#inputSalarioRecebido')
-
 function changeSalario(){
     const cardSalario = document.querySelector('.receita-valor')
 
     cardSalario.innerHTML = `${formatValue(parseFloat(valorSalario.value))}`
 }   
 
-function enviarInfo(event){
+function changeConta(){
+    const cardConta = document.querySelector('.valor-users')
+
+    cardConta.innerHTML = `${formatValue(parseFloat(valorConta.value))}`
+}
+
+
+function enviarSalario(event){
     if (event.key === 'Enter'){
         changeSalario()
         valorSalario.value = '';
     }
 }
 
-valorSalario.addEventListener('keydown', enviarInfo)
+function enviarConta(event){
+    if (event.key === 'Enter'){
+        changeConta()
+        valorConta.value = '';
+    } 
+}
+
+
+valorSalario.addEventListener('keydown', enviarSalario)
+valorConta.addEventListener('keydown', enviarConta)
