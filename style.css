@@ -219,6 +219,15 @@ nav.menu-lateral ul li.item-menu a .icon i {
     border: 1px solid #ccc;
     color: #fff;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-salario:hover{
+    background-color: #237e38;
+}
+
+.btn-salario:active{
+    opacity: 0.9;
 }
 
 .btn-salario {
@@ -226,9 +235,10 @@ nav.menu-lateral ul li.item-menu a .icon i {
     margin: 10px auto;
 }
 
-.recebido-user{
+.recebido-user, .container-user{
     display: flex;
     max-width: 800px;
+    min-height: 100%;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
@@ -261,6 +271,20 @@ nav.menu-lateral ul li.item-menu a .icon i {
     border: 1px solid #ccc;
     color: #fff;
     font-size: 16px;
+}
+
+.container-user h2{
+    text-align: center;
+}
+
+#list-transition li{
+    display: flex;
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* ===== RESPONSIVE ===== */
