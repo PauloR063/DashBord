@@ -68,7 +68,7 @@ nav.menu-lateral ul li.item-menu a {
 }
 
 nav.menu-lateral ul li.item-menu a .txt-link {
-    margin-left: 23px;
+    margin-left: 24px;
 }
 
 nav.menu-lateral ul li.item-menu a .icon i {
@@ -154,6 +154,14 @@ nav.menu-lateral ul li.item-menu a .icon i {
     font-size: 24px;
 }
 
+#del-icons{
+    position: absolute;
+    top: 50px;
+    right: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .total { background-color: #4E82F0; }
 .users { background-color: #20B3C3; }
 .active { background-color: #FFAD61; }
@@ -192,12 +200,14 @@ nav.menu-lateral ul li.item-menu a .icon i {
     align-items: center;
 }
 
-.salario-users h1, .inputs-wrapper h1 {
+.salario-users h1, 
+.inputs-wrapper h1 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.salario-users input, .recebido-user input {
+.salario-users input, 
+.recebido-user input {
     width: 100%;
     padding: 8px;
     text-align: center;
@@ -222,20 +232,26 @@ nav.menu-lateral ul li.item-menu a .icon i {
     cursor: pointer;
 }
 
-.btn-salario:hover{
+.btn-salario:hover, 
+.btn-receber:hover{
     background-color: #237e38;
 }
 
-.btn-salario:active{
+
+.btn-salario:active, 
+.btn-receber:active,
+.btn-retirar:active{
     opacity: 0.9;
 }
 
-.btn-salario {
+.btn-salario, 
+.btn-salario-remove {
     display: block;
     margin: 10px auto;
 }
 
-.recebido-user, .container-user{
+.recebido-user, 
+.container-user{
     display: flex;
     max-width: 800px;
     min-height: 100%;
@@ -262,7 +278,8 @@ nav.menu-lateral ul li.item-menu a .icon i {
     align-items: center;
 }
 
-.btn-receber{
+.btn-receber, 
+.btn-retirar{
     min-width: 17%;
     margin: 0 auto;
     padding: 18px;
@@ -271,13 +288,27 @@ nav.menu-lateral ul li.item-menu a .icon i {
     border: 1px solid #ccc;
     color: #fff;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-retirar{
+    background-color: #e62c17;
+    margin-top: -15px;
+}
+
+.btn-retirar:hover{
+    background-color: #b13325;
 }
 
 .container-user h2{
     text-align: center;
 }
 
-#list-transition li{
+#list-transition{
+    list-style: none;
+}
+
+.li-info{
     display: flex;
     background-color: #eee;
     padding: 10px;
@@ -287,10 +318,44 @@ nav.menu-lateral ul li.item-menu a .icon i {
     align-items: center;
 }
 
+#span-data{
+    display: flex;
+    position: relative;
+    right: 5%
+}
+
+#input-data-users {
+  padding: 6px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+/* Chrome, Edge e Safari: ícone do calendário */
+#input-data-users::-webkit-calendar-picker-indicator {
+  background: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/calendar-date.svg") no-repeat center;
+  background-size: 18px 18px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+#input-data-users::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .navbar-superior { margin-left: 80px; }
     .main { margin-left: 80px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    #span-data{
+    display: flex;
+    position: relative;
+    right: 1%;
+}
 }
 
 @media (max-width: 768px) {

@@ -79,13 +79,14 @@
             <h1>Salário</h1>
             <i class="bi bi-currency-dollar"></i>
             <p class="receita-valor">R$ 0,00</p>
+            <i class="bi bi-trash3-fill" id="del-icons"></i>
         </div>
     </div>
 
     <div class="salario-users">
         <div class="valorSalario">
             <h1>Salario</h1>
-            <input type="number" id="inputSalarioRecebido" placeholder="R$ 0,00">
+            <input type="text" id="inputSalarioRecebido" placeholder="R$ 0,00">
         </div>
 
         <button type="button" class="btn-salario">Enviar</button>
@@ -93,29 +94,30 @@
 
     <div class="recebido-user">
         <div class="inputs-wrapper">
-            <div class="valorRecebido">
-                <h1>Valor recebido</h1>
-                <input type="number" id="inputValueRecebido" placeholder="R$ 0,00">
-            </div>
-
-            <div class="data-users">
-                <h1>Data</h1>
-                <input type="date" id="input-data-users">
-            </div>
-
             <div class="descricao-users">
                 <h1>Descrição</h1>
                 <input type="text" id="input-descricao" placeholder="Digite a descrição">
             </div>
+
+            <div class="data-users">
+                <h1>Data</h1>
+                <input type="datetime-local" id="input-data-users">
+            </div>
+
+            <div class="valorRecebido">
+                <h1>Valor recebido</h1>
+                <input type="text" id="inputValueRecebido" placeholder="R$ 0,00">
+            </div>
         </div>
 
-        <button type="button" class="btn-receber">Enviar</button>
+        <button type="button" class="btn-receber">Adicionar</button>
+        <button type="button" class="btn-retirar">Retirar</button>
     </div>
 
     <div class="container-user">
         <h2>Transações</h2>
         <ul id="list-transition">
-            <li>Salario dia 5 <span>200</span></li>
+            
         </ul>
     </div>
     <script src="./product.js"></script>
