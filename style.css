@@ -347,6 +347,15 @@ nav.menu-lateral ul li.item-menu a .icon i {
   opacity: 1;
 }
 
+.verde {
+  color: #28a745; /* verde */
+}
+
+.vermelho {
+  color: #dc3545; /* vermelho */
+}
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .navbar-superior { margin-left: 80px; }
